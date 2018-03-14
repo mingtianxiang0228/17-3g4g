@@ -1,0 +1,101 @@
+*{
+	padding: 0 ;
+	margin:0 ;
+}
+html,body{
+	height: 100%;
+}
+
+.wrap{
+	margin:0 auto;
+	text-align: center;
+}
+.header-top{
+	background: rgba(0,0,0,0.6);
+	height: 90px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	
+}
+a{
+	text-decoration: none;
+}
+.header-nav{
+	margin: 0 48px;
+}
+.logo,.header-nav,.header-right,.header-nav li{
+	display: inline-block;
+	vertical-align: top;
+	
+}
+.header-nav li{
+	width: 100px;
+	height: 90px;
+	line-height: 90px;
+}
+.header-nav ul li a{
+	color: azure;
+}
+.header-nav ul li a:hover{
+	color:red ;
+}
+
+.header-right a{
+	display: inline-block;
+    line-height: 60px;
+    margin-top: 25px;
+     width: 100px;
+    border-radius: 18px;
+ }
+.header-right a:first-of-type{
+	color: #FFD700;
+	line-height: 40px;
+	width: 100px;
+	 border: solid 1px gold;
+}
+.header-right a:last-of-type{
+	color: #FFD700;
+	line-height: 40px;
+	width: 100px;
+	 border: solid 1px gold;
+}
+section img{
+vertical-align: bottom;
+	
+}
+footer{
+height: 280px;
+width: 100%;
+background: black;
+padding-top:40px;
+
+}
+footer ul,footer ul li{
+	display: inline-block;
+}
+footer ul li a{
+	width: 100px;
+	line-height:100 px;
+	
+	}
+ footer ul li span:first-of-type{
+ 	height: ;
+ 	width: ;
+ 	display: block;
+ }
+footer ul li span:first-of-type{
+	background: url(../img/sprites_footer.png)no-repeat;
+	width: 100px;
+	height: 90px;
+}
+footer ul li:nth-of-type(1) span:first-of-type{
+	background-position: 0 0;
+}
+footer ul li:nth-of-type(1) span:first-of-type:hover{
+	background-position: -100px 0;
+}
+footer ul li:nth-of-type(2) span:first-of-type{
+	background-position: 0 -100px;
+}
