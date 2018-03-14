@@ -1,0 +1,109 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.header{
+	position: fixed;
+width: 100%;
+height: 150px;
+background-color: rgba(0,0,0,.64);
+text-align: center;
+}
+.header-top a{
+    color: azure;
+	
+	text-decoration: none;
+}
+.header img,.header-top,.header-top li{
+	display: inline-block;
+}
+.header img{
+	margin-right: 300px;
+}
+.header-top li{
+	width: 105px;
+	height: 90px;
+	
+}
+.header-top a{
+	
+	margin-left: -630px;
+	
+}
+.header-top, .header-top li{
+	margin-top: -10px;
+	line-height: 10px;
+	margin-left: 50px;
+	vertical-align: middle;
+}
+.header-right {
+    width: 100px;
+	display: inline-block;
+}
+.header-right a{
+    color: azure;
+	
+	width: 300px;
+	height: 200px;
+	text-decoration: none;
+	margin-left: -200px;
+}
+	
+.section img{
+	vertical-align: bottom;
+}
+.footer{
+    height: 300px;
+    width: 100%;
+	background-color: rgba(0,0,0,.76);
+}
+.footer a{
+	text-decoration: none;
+	margin-left: -100px;
+}
+.footer,.footer li,.footer a{
+    color: azure;
+	text-align: center;
+	display: inline-block;
+	
+}
+.footer li{
+	
+    margin-top: 200px;
+    width:200px;	
+}
+.footer ul li samp:first-of-type{
+	
+	display: block;
+	width: 100px;
+	height: 90px;
+	margin-top: -150px;
+	background: url(../img/sprites_footer.png)no-repeat;
+}
+.div ul li:nth-of-type(1) samp:first-of-type{
+	background-position: 0px 0px;
+}
+.div ul li:nth-of-type(1) samp:first-of-type:hover{
+	background-position: -100px 0px;
+}
+.div ul li:nth-of-type(2) samp:first-of-type{
+	background-position: 0px -100px;
+}
+.div ul li:nth-of-type(2) samp:first-of-type:hover{
+	background-position: -100px -100px;
+}.div ul li:nth-of-type(3) samp:first-of-type{
+	background-position: 0px -200px ;
+}
+.div ul li:nth-of-type(3) samp:first-of-type:hover{
+	background-position: -100px -200px ;
+}.div ul li:nth-of-type(4) samp:first-of-type{
+	background-position: 0px -400px ;
+}
+.div ul li:nth-of-type(4) samp:first-of-type:hover{
+background-position: -100px -400px ;
+}.div ul li:nth-of-type(5) samp:first-of-type{
+	background-position: 0px -500px;
+}
+.div ul li:nth-of-type(5) samp:first-of-type:hover{
+	background-position: -100px -500px ;
+}
