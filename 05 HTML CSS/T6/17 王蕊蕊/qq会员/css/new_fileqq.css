@@ -1,0 +1,130 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body,html{
+	height: 100%;
+}
+a{
+	text-decoration: none;
+}
+.wrap{
+	margin: 0 auto; 
+	text-align: center;
+}
+.top{
+	position: fixed;
+	background: rgba(0,0,0,0.5);
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+.logo,.header-nav,.header-nav li,.right{
+	display: inline-block;
+	height: 90px;
+	margin: 0 auto;
+	line-height: 90px;
+	vertical-align: top;
+}
+.header-nav li{
+	margin: 0 18px;
+}
+.header-nav li a{
+    color: white;
+}
+.header-nav li a:hover{
+	color:crimson ;
+}
+
+.right a{
+	border: solid 1px #FF8C00;
+	border-radius:18px ;
+	width: 100px;
+	color: darkorange;
+	margin: 0 18px;
+	display: inline-block;
+	margin-top: 20px;
+	line-height: 40px;
+}
+.right a:first-of-type:hover{
+	color: deeppink;
+	background:#FF8C00;
+}
+.right a:last-of-type:hover{
+	color: deeppink;
+	background:#FF8C00;
+}
+section img{
+	vertical-align: bottom;
+}
+footer{
+	line-height: 200px;
+	background: slategrey;
+}
+.footer-nav li{
+	line-height: 90px;
+	margin-left: 40px;
+	display: inline-block;
+}
+.footer-nav li a{
+	color: white;
+}
+.footer-nav li a:hover{
+	color: gold;
+}
+.footer-nav li span:first-of-type{
+	display: block;
+	height:80px;
+	width: 100px;
+	background: url(../img/sprites_footer.png) no-repeat;
+	
+}
+.footer-nav li:nth-of-type(1) span:first-of-type{
+	background-position:0px 0px ;
+}
+.footer-nav li:nth-of-type(1) span:first-of-type:hover{
+	background-position:-100px 0px;
+}
+.footer-nav li:nth-of-type(2) span:first-of-type{
+	background-position:0px -100px ;
+}
+.footer-nav li:nth-of-type(2) span:first-of-type:hover{
+	background-position:-100px -100px;
+}
+.footer-nav li:nth-of-type(3) span:first-of-type{
+	background-position:0px -200px ;
+}
+.footer-nav li:nth-of-type(3) span:first-of-type:hover{
+	background-position:-100px -200px;
+}
+.footer-nav li:nth-of-type(4) span:first-of-type{
+	background-position:0px -300px ;
+}
+.footer-nav li:nth-of-type(4) span:first-of-type:hover{
+	background-position:-100px -300px;
+}
+
+.footer-nav li:nth-of-type(5) span:first-of-type{
+	background-position:0px -400px ;
+}
+.footer-nav li:nth-of-type(5) span:first-of-type:hover{
+	background-position:-100px -400px;
+}
+.footer-nav li:nth-of-type(6) span:first-of-type{
+	background-position:0px -500px ;
+}
+.footer-nav li:nth-of-type(6) span:first-of-type:hover{
+	background-position:-100px -500px;
+}
+.footer-nav li:nth-of-type(7) span:first-of-type{
+	background-position:0px -600px ;
+}
+.footer-nav li:nth-of-type(7) span:first-of-type:hover{
+	background-position:-100px -600px;
+}
+.p1 li a{
+	color: #FFFFFF;
+}
+.p1 li a:hover{
+	color: #FFD700;
+}
