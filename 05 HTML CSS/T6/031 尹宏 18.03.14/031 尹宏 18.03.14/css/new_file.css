@@ -1,0 +1,47 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+head,body{
+	height: 100%;
+}
+.d1{
+	position: fixed;
+	top: 0;
+	height: 100px;
+	width: 100%;
+	background-color: rgba(0,0,0,0.6);
+}
+.d3{
+	position: fixed;
+	left: 70px;
+	
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+.d4{
+	position: fixed;
+	top: 40px;
+	left: 350px;
+	
+}
+.d5{
+	position: fixed;
+	top: 50px;
+	height: 90px;
+	right: 100px;
+	
+	
+}
+.a1,.a2{
+	margin-left: 15px;
+	margin-top: -15px;
+	display: inline-block;
+	line-height: 40px;
+	width: 80px;
+	border: 1px solid white;
+	float: left;
+	border-radius: 18px;
+}
