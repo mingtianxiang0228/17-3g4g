@@ -1,0 +1,78 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.div1{
+	height: 500px;
+	width: 100%;
+	text-align: center;
+	background: rgba(0,0,0,0.6);
+	           
+}
+.div1 li a{
+	text-decoration: none;
+	font-size:30px ;
+	color: white;
+	line-height: 290px;
+}
+.div1 li{
+	height: 200px;
+	width: 200px;
+	border: 10px solid aqua;
+	border-radius:50% ;
+	margin-left: -30px;
+	margin-top: 60px;
+
+	display: inline-block;
+}
+.div1 li:first-of-type{
+	background-color: chartreuse;
+	
+}
+.div1 li:first-of-type:hover{
+	background-color: black;
+	
+}
+.div1 li:nth-of-type(2){
+	background-color: pink;
+	
+}
+.div1 li:nth-of-type(2):hover{
+	background-color: sienna;
+
+}
+.div1 li:nth-of-type(3){
+	background-color: yellow;
+	
+}
+.div1 li:nth-of-type(3):hover{
+	background-color: darkmagenta;
+	
+}
+.div1 li:nth-of-type(4){
+	background-color: red;
+	
+}
+.div1 li:nth-of-type(4):hover{
+	background-color: royalblue;
+	
+}
+.div1 li:nth-of-type(5){
+	background-color: bisque;
+	
+}
+.div1 li:nth-of-type(5):hover{
+	background-color: orangered;
+	
+}
+
+
+
+.div1 li:hover{
+	transform:scale(1.1) ;
+	-webkit-transform:scale(1.1) ;
+	
+	transition: all 0.5s linear;
+	-webkit-transition:all 0.5s linear ;
+}
