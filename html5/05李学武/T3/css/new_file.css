@@ -1,0 +1,83 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+.l {
+	margin-top: 10%;
+	margin-left: 20%;
+}
+
+.l ul li a span {
+	display: inline-block;
+	margin-top: 50px;
+}
+
+.l li {
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	text-align: center;
+	background: gray;
+	border: solid hotpink 10px;
+	border-radius: 50%;
+	margin-left: -30px;
+}
+
+.l li:hover {
+	width: 120px;
+	height: 120px;
+	transform: scale(1);
+	-moz-transform: scale(1);
+	-webkit-transform: scale(1);
+}
+
+.l li:nth-of-type(1) {
+	background: goldenrod;
+}
+
+.l li:nth-of-type(1):hover {
+	background: wheat;
+}
+
+.l li:nth-of-type(2) {
+	background: cadetblue;
+}
+
+.l li:nth-of-type(2):hover {
+	background: blueviolet;
+}
+
+.l li:nth-of-type(3) {
+	background: greenyellow;
+}
+
+.l li:nth-of-type(3):hover {
+	background: red;
+}
+
+.l li:nth-of-type(4) {
+	background: lightseagreen;
+}
+
+.l li:nth-of-type(4):hover {
+	background: green;
+}
+
+.l li:nth-of-type(5) {
+	background: coral;
+}
+
+.l li:nth-of-type(5):hover {
+	background: black;
+}
+

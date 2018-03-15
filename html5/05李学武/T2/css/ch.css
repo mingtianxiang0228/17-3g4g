@@ -1,0 +1,76 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	height: 100%;
+}
+a{
+	text-decoration: none;
+}
+.to{
+	width: 100%;
+	height: 80px;
+	position: absolute;
+	background-color: #FFFFFF;
+}
+.tu1{
+	width: 100px;
+	height: 80px;
+	position: absolute;
+	left: 100px;
+}
+.zi1{
+	left: 230px;
+	top: 30px;
+	position: absolute;
+	word-spacing: 15px;
+}
+.zi2{
+	right: 300px;
+	top:30px;
+	position: absolute;
+	word-spacing: 20px;
+}
+.sai{
+	border: solid;
+	border-radius:15px ;
+}
+.t1{
+	margin-left: 200px;
+	margin-top: 10px;
+}
+.t2{
+	margin-left: 530px;
+	margin-top: -725px;
+}
+.t3{
+	margin-left: 530px;
+	margin-top: 15px;
+}
+.t4{
+	margin-left: 200px;
+	margin-top: 15px;
+}
+.t5{
+	margin-left: 730px;
+	margin-top: -355px;
+}
+.t6{
+	margin-left: 200px;
+}
+.wei{
+	width: 100%;
+	height: 400px;
+	background: rgba(0,0,0,0.8);
+}
+.weiz1 li{
+	font-size: 12px;
+	word-spacing: 100px;
+	margin-left: 160px;
+	font-size: 20px;
+	word-spacing: 15px;
+	display: inline-block;
+	text-decoration: none;
+}
+

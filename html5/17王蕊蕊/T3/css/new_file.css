@@ -1,0 +1,48 @@
+*{
+	margin: 0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+}
+.p{
+	text-align: center;
+	margin-top: 60px;
+}
+.p li{
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	border: 8px solid gainsboro;
+	border-radius: 50%;
+	margin-left: -40px;
+	line-height: 200px;
+	background: darkgreen;
+}
+.p li:hover{
+	transform: scale(1.1);
+	-webkit-transition: all 0.3s linear;
+	opacity: 0.5;
+	
+}
+.p li:nth-of-type(1){
+	background: cornflowerblue;
+	border: 10px solid lightblue;
+}
+.p li:nth-of-type(2){
+	background:deeppink ;
+	border: 10px solid lightpink;
+}
+.p li:nth-of-type(3){
+	background:aqua;
+	border: 8px solid paleturquoise;
+}
+.p li:nth-of-type(4){
+	background:coral;
+	border: 8px solid darksalmon;
+	
+}
+.p li:nth-of-type(5){
+	background:gold;
+	border: 8px solid khaki;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk"/>
+<title>网页中导入特殊字体@font-face属性详解</title>
+<meta name="keywords" content="特殊字体,字体" />
+<style type="text/css">
+#main{margin:10px auto; width:950px; line-height:28px; font-size:14px;}
+</style>
+</head>
+<body>
+<div id="main">
+
+     <h1 class="ts">网页中导入特殊字体@font-face属性详解</h1>
+<div><font face="Tahoma, Helvetica, SimSun, sans-serif">@font-face是CSS3中的一个模块，他主要是把自己定义的Web字体嵌入到你的网页中，随着@font-face模块的出现，我们在Web的开发中使用字体不怕只能使用Web安全字体，你们当中或许有许多人会不自然的问，这样的东西IE能支持吗？当我告诉大家@font-face这个功能早在IE4就支持了你肯定会感到惊讶。我的Blog就使用了许多这样的自定义Web字体，比如说首页的Logo，Tags以及页面中的手写英文体，很多朋友问我如何使用，能让自己的页面也支持这样的自定义字体，一句话这些都是@font-face实现的，为了能让更多的朋友知道如何使用他，今天我主要把自己的一点学习过程贴上来和大家分享。</font><br />
+                          <br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">首先我们一起来看看@font-face的语法规则：</font><br />
+                          <font color="pink"><font face="Tahoma, Helvetica, SimSun, sans-serif"><font style="background-color:rgb(72, 209, 204)"><font color="navy"><font style="background-color:rgb(255, 192, 203)">@font-face {<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;font-family: &lt;YourWebFontName&gt;;<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;src: &lt;source&gt; [&lt;format&gt;][,&lt;source&gt; [&lt;format&gt;]]*;<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;[font-weight: &lt;weight&gt;];<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;[font-style: &lt;style&gt;];<br />
+                          &nbsp; &nbsp; }<br />
+                          </font></font></font></font></font><font face="Tahoma, Helvetica, SimSun, sans-serif">取值说明<br />
+                          </font><font face="Tahoma, Helvetica, SimSun, sans-serif">1、YourWebFontName:此值指的就是你自定义的字体名称，最好是使用你下载的默认字体，他将被引用到你的Web元素中的font-family。如“font-family:&quot;YourWebFontName&quot;;”</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">2、source:此值指的是你自定义的字体的存放路径，可以是相对路径也可以是绝路径；</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">3、format：此值指的是你自定义的字体的格式，主要用来帮助浏览器识别，其值主要有以下几种类型：truetype,opentype,truetype-aat,embedded-opentype,avg等；</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">4、weight和style:这两个值大家一定很熟悉，weight定义字体是否为粗体，style主要定义字体样式，如斜体。</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">兼容浏览器</font><br />
+                          <img src="images/font-face-browers.jpg" border="0" alt="" /><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">说到浏览器对@font-face的兼容问题，这里涉及到一个字体format的问题，因为不同的浏览器对字体格式支持是不一致的，这样大家有必要了解一下，各种版本的浏览器支持什么样的字体，前面也简单带到了有关字体的几种格式，下面我就分别说一下这个问题，让大家心里有一个概念：</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">一、TureTpe(.ttf)格式：</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">.ttf字体是Windows和Mac的最常见的字体，是一种RAW格式，因此他不为网站优化,支持这种字体的浏览器有【IE9+,Firefox3.5+,Chrome4+,Safari3+,Opera10+,iOS Mobile Safari4.2+】；</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">二、OpenType(.otf)格式：</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">.otf字体被认为是一种原始的字体格式，其内置在TureType的基础上，所以也提供了更多的功能,支持这种字体的浏览器有【Firefox3.5+,Chrome4.0+,Safari3.1+,Opera10.0+,iOS Mobile Safari4.2+】；</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">三、Web Open Font Format(.woff)格式：</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">.woff字体是Web字体中最佳格式，他是一个开放的TrueType/OpenType的压缩版本，同时也支持元数据包的分离,支持这种字体的浏览器有【IE9+,Firefox3.5+,Chrome6+,Safari3.6+,Opera11.1+】；</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">四、Embedded Open Type(.eot)格式：</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">.eot字体是IE专用字体，可以从TrueType创建此格式字体,支持这种字体的浏览器有【IE4+】；</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">五、SVG(.svg)格式：</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">.svg字体是基于SVG字体渲染的一种格式,支持这种字体的浏览器有【Chrome4+,Safari3.1+,Opera10.0+,iOS Mobile Safari3.2+】。</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">这就意味着在@font-face中我们至少需要.woff,.eot两种格式字体，甚至还需要.svg等字体达到更多种浏览版本的支持。</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">为了使@font-face达到更多的浏览器支持，</font><font color="#336699"><font face="Tahoma, Helvetica, SimSun, sans-serif"><a href="http://paulirish.com/" target="_blank"><font color="#0066cc">Paul Irish</font></a></font></font><font face="Tahoma, Helvetica, SimSun, sans-serif">写了一个独特的@font-face语法叫</font><font color="#336699"><font face="Tahoma, Helvetica, SimSun, sans-serif"><a href="http://paulirish.com/2009/bulletproof-font-face-implementation-syntax/" target="_blank"><font color="#0066cc">Bulletproof @font-face</font></a></font></font><font face="Tahoma, Helvetica, SimSun, sans-serif">:</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">&nbsp; &nbsp;</font><font color="navy"><font face="Tahoma, Helvetica, SimSun, sans-serif"><font style="background-color:rgb(255, 192, 203)">@font-face {&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;font-family: 'YourWebFontName';&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;src: url('YourWebFontName.eot?') format('eot');/*IE*/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;src:url('YourWebFontName.woff') format('woff'), url('YourWebFontName.ttf') format('truetype');/*non-IE*/&nbsp; &nbsp;<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; }</font></font></font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">但为了让各多的浏览器支持，你也可以写成：</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">&nbsp; &nbsp;</font><font color="navy"><font face="Tahoma, Helvetica, SimSun, sans-serif"><font style="background-color:rgb(255, 192, 203)">@font-face {&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;font-family: 'YourWebFontName';&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;src: url('YourWebFontName.eot'); /* IE9 Compat Modes */&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;src: url('YourWebFontName.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; url('YourWebFontName.woff') format('woff'), /* Modern Browsers */&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; url('YourWebFontName.ttf')&nbsp;&nbsp;format('truetype'), /* Safari, Android, iOS */&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; url('YourWebFontName.svg#YourWebFontName') format('svg'); /* Legacy iOS */&nbsp; &nbsp;<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; }</font></font></font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">说了这么多空洞的理论知识，大家一定有点心痒痒了，那么我们先来看看W3CPLUS首页中导航部分的兰色字体是如何实现的，假如我们有一个这样的DOM标签，需要应用自定义字体：</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">HTML Code:</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">&nbsp; &nbsp;&lt;h2 class=&quot;neuesDemo&quot;&gt;Neues Bauen Demo&lt;/h2&gt;</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">通过@font-face来定义自己的Web Font:</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">&nbsp;&nbsp;</font><font color="navy"><font face="Tahoma, Helvetica, SimSun, sans-serif"><font style="background-color:rgb(255, 192, 203)">@font-face {&nbsp; &nbsp; <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;font-family: 'NeuesBauenDemo';&nbsp; &nbsp; <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;src: url('../fonts/neues_bauen_demo-webfont.eot');&nbsp; &nbsp; <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;src: url('../fonts/neues_bauen_demo-webfont.eot?#iefix') format('embedded-opentype'),&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;url('../fonts/neues_bauen_demo-webfont.woff') format('woff'),&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;url('../fonts/neues_bauen_demo-webfont.ttf') format('truetype'),&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;url('../fonts/neues_bauen_demo-webfont.svg#NeuesBauenDemo') format('svg');&nbsp; &nbsp; <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; font-weight: normal;&nbsp; &nbsp; <br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; font-style: normal;&nbsp;&nbsp;<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;}</font></font></font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">我在这里采用的是相对路径，当然大家也可以使用绝路径。到这里我们就需要把定义好的字体应用到我们实际页面中去：</font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">&nbsp; &nbsp;</font><font color="navy"><font face="Tahoma, Helvetica, SimSun, sans-serif"><font style="background-color:rgb(255, 192, 203)">h2.neuesDemo {&nbsp; &nbsp;&nbsp; &nbsp;<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;font-family: 'NeuesBauenDemo'&nbsp; &nbsp;<br />
+                          &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; }</font></font></font><br />
+                          <font face="Tahoma, Helvetica, SimSun, sans-serif">效果：</font><br />
+                          <img  src="images/neues-bauen-demo.jpg" border="0" alt="" /><br />
+                         <br />
+                         
+</div>
+</div>
+</body>
+</html>
