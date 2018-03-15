@@ -1,0 +1,60 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.d1{
+	height: 400px;
+	width: 1000px;
+	text-align: center;
+    margin-top: 100px;
+}
+.a{
+	text-decoration: none;
+}
+.d1 ul li {
+	display: inline-block;
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	border: 10px solid lawngreen;
+	background:aquamarine;	
+	margin-right:-30px ;
+}
+
+.d1 ul li:first-of-type{
+	background: aquamarine;
+}
+.d1 ul li:first-of-type:hover{
+	background: darkorange;
+}
+.d1 ul li:nth-of-type(2){
+	background: aquamarine;
+}
+.d1 ul li:nth-of-type(2):hover{
+	background: darkgoldenrod;
+}
+.d1 ul li:nth-of-type(3){
+	background: aquamarine;
+}
+.d1 ul li:nth-of-type(3):hover{
+	background: #FF7F50;
+}
+.d1 ul li:nth-of-type(4){
+	background: aquamarine;
+}
+.d1 ul li:nth-of-type(4):hover{
+	background: cornflowerblue;
+}
+.d1 ul li:last-of-type{
+	background: aquamarine;
+}
+.d1 ul li:last-of-type:hover{
+	background: darkorchid;
+}
+.d1 li:hover{
+	transform: scale(1.0);
+	-webkit-transition: all 0.4s linear;
+	transform: scale(1.0);
+	-webkit-transition: all 0.4s linear;
+}
+

@@ -1,0 +1,66 @@
+
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	height: 100%;
+}
+a{
+	text-decoration: none;
+	line-height: 200px;
+}
+.div1{
+	text-align: center;
+}
+.div1 nav ul li{
+	width: 150px;
+	height: 150px;
+	border: solid gold 6px;
+	border-radius: 50%;
+	background-color: aqua;
+	
+	/*边框大小和颜色*/
+}
+ul{
+list-style:none;
+}
+/*去掉前面的点*/
+.div1 nav ul li{
+	display: inline-block;
+	/*横向*/
+	margin-left:-40px;
+	font-size: 20px;
+	margin-top: 60px;
+	
+}
+.div1 nav ul li:first-of-type {
+	background-color: bisque;
+}
+.div1 nav ul li:first-of-type:hover{
+	background-color: cornflowerblue;
+}
+.div1 nav ul li:nth-of-type(2){
+	background-color: blueviolet;
+}
+.div1 nav ul li:nth-of-type(2):hover{
+	background-color: black;
+}
+.div1 nav ul li:nth-of-type(3){
+background-color: cadetblue;
+}
+.div1 nav ul li:nth-of-type(3):hover{
+	background-color: beige;
+}
+.div1 nav ul li:nth-of-type(4){
+	background-color: crimson;
+}
+.div1 nav ul li:nth-of-type(4):hover{
+background-color: chocolate;
+}
+.div1 nav ul li:nth-of-type(5){
+background-color: chartreuse;
+}
+.div1 nav ul li:nth-of-type(5):hover{
+	background-color: green;
+}

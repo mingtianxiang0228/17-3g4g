@@ -1,0 +1,30 @@
+*{
+	padding: 0;
+    margin: 0;
+}
+.div1{
+	height: 500px;
+	width: 100%;
+	display: inline-block;
+}
+.div1 li{
+	display: inline-block;
+	height: 80px;
+	width: 80px;
+	border-radius:50%;
+	border:10px solid brown;
+	background: greenyellow;
+	margin-left: -50px;
+}
+.div1,.div1 li{
+	text-align: center;
+	height: 80px;
+	
+	
+	
+	
+}
+.div1 li:hover{
+	transform: scale(3.3);
+	-webkit-transform:scale(1.5) ;
+}
