@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	<script>
+			function zhi(num){
+				var a ;
+				a=t2.value;
+				
+				if(a=="" || a==null ){
+					t2.value=parseInt(num);
+				}else{
+					t4.value=parseInt(num);
+				}
+				
+			}
+			function fh(fh){
+				t3.value=fh;
+			}
+		    function jieguo(){
+				var a,b,c;
+				a=t2.value;
+				b=t3.value;
+				c=t4.value;
+  			    if(b=="+"){
+					t1.value=parseInt(a)+parseInt(c);
+				}else
+				if(b=="-"){
+					t1.value=parseInt(a)-parseInt(c);
+				}else
+				if(b=="*"){
+					t1.value=parseInt(a)*parseInt(c);
+				}else
+				if(b=="/"){
+					t1.value=parseInt(a)/parseInt(c);
+				}
+			}
+		    
+				function cl(){
+				   t1.value="";
+				   t2.value="";
+				   t3.value="";
+				   t4.value="";
+            }
+			
+		</script>
+	</head>
+	<body>
+		<form name="frm1">
+			<input type ="text" id="t1" value=""/><br>
+			<input type ="text" id="t2" value=""/>
+			<input type ="text" id="t3" value=""/>
+			<input type ="text" id="t4" value=""/><br />
+			<input type ="button" value="1" onclick="zhi(this.value)"/>
+			<input type ="button" value="2" onclick="zhi(this.value)"/>
+			<input type ="button" value="3" onclick="zhi(this.value)"/>
+			<input type ="button" value="4" onclick="zhi(this.value)"/><br />
+			<input type ="button" value="5" onclick="zhi(this.value)"/>
+			<input type ="button" value="6" onclick="zhi(this.value)"/>
+			<input type ="button" value="7" onclick="zhi(this.value)"/>
+			<input type ="button" value="8" onclick="zhi(this.value)"/><br />
+			<input type ="button" value="9" onclick="zhi(this.value)"/>
+			<input type ="button" value="0" onclick="zhi(this.value)"/>
+			<input type ="button" value="+" onclick="fh(this.value)"/>
+			<input type ="button" value="-" onclick="fh(this.value)"/><br />
+			<input type ="button" value="*" onclick="fh(this.value)"/>
+			<input type ="button" value="/" onclick="fh(this.value)"/>
+			<input type ="button" value="=" onclick="jieguo(this.value)"/>
+			<input type ="button" value="C" onclick="cl(this.value)"/>
+		</form>
+	</body>
+</html>
